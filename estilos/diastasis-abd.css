@@ -1,0 +1,39 @@
+/* Cabecera */
+header {
+    background-image: url('/img/cabecera-diastasis.jpg');
+}
+/* Fin cabecera */
+
+/* Sección con imgs */
+#contenedor-img {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 4em;
+
+   
+    
+    .img-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0px 40px 0px;
+        gap: 2rem;
+
+        img {
+            height: 300px;
+        }
+    }
+}
+
+#contenedor-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+/* Fin sección con imgs */

@@ -1,0 +1,97 @@
+/* CONTACTO */
+
+#informacion {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        gap: 20px;
+        width: calc(100% / 4);
+        height: 175px;
+
+        i {
+            font-size: 2.5em;
+        }
+
+        span {
+            text-align: center;
+            font-size: small;
+        }
+
+    }
+}
+
+#contacto {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+    > div {
+        text-align: start;
+
+        p:first-child {
+            padding-bottom: 16px;
+        }
+
+        p:nth-child(2) {
+            padding-bottom: 16px;
+        }
+
+        #form-rrss {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            form {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+                flex-grow: 1;
+                gap: 20px;
+    
+                label {
+                    width: 70px;
+                }
+    
+                #btn {
+                    padding: 5px 50px;
+                }
+            } 
+
+        }
+
+    }
+}
+/* FIN CONTACTO */
+
+@media (width < 1000px) {
+    #informacion {
+        flex-wrap: wrap;
+    }
+
+    #informacion .info {
+        flex-grow: 1;
+        width: 100%;
+    }
+
+    #contacto {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    iframe {
+        width: 90%;
+    }
+}

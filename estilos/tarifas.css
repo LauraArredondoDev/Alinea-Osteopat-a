@@ -1,0 +1,40 @@
+/* TARIFAS */
+#tarifas {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    
+    > div {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        flex-wrap: wrap;
+        align-items: start;
+        justify-content: center;
+        
+
+        .card {
+            --bs-card-cap-bg: #FCF5ED;
+            text-align: center;
+            min-width: 200px;
+            flex-grow: 1;
+
+            .card-header {
+                height: 30%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100px;
+                
+                h5 {
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+
+        }
+    }
+
+}
+/* FIN TARIFAS*/

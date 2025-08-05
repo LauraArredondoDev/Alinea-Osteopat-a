@@ -1,0 +1,56 @@
+/* Cabecera */
+header {
+    background-image: url('/img/cabecera-osteopatia.jpg');
+}
+/* Fin cabecera */
+
+/* Acordeones */
+#acordeones {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    margin-top: 40px;
+}
+
+.accordion {
+    width: 60%;
+
+    .accordion-button {
+        height: 8rem;
+
+        p {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 0.8rem;
+            width: 100%;
+            color: black;
+        }
+    }
+
+    .accordion-button:not(.collapsed) {
+        background-color: #f9cc9d78;
+    } 
+    
+    .accordion-button:hover {
+        background-color: #F5AC5C;
+    }
+
+    .accordion-body{
+        background-color: #f9cc9d78;
+    }
+    
+}
+
+
+ul {
+    text-align: center;
+
+    li {
+        list-style: none;
+    }
+}
+/* Fin acordeones */

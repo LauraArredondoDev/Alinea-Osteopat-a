@@ -1,0 +1,255 @@
+/* ---------------Sección principal------------------- */
+header {
+    background-image: url('../img/cabecera.jpg');
+}
+
+
+#section-1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .cards {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: start;
+        gap: 50px;
+        align-items: center;
+       
+        img {
+            width: 80px;
+        }
+
+        .txt {
+            background-color: #f9cc9d78;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+            h4 {
+                padding-bottom: 15px;
+                font-family: "Open Sans", sans-serif;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+/* Síntomas */
+#seccion-sintomas {
+   display: flex;
+   flex-direction: column;
+   padding-top: 50px;
+   padding-bottom: 50px;
+   background-color: #f8f9fa;
+
+    > div {
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        justify-content: start;
+        flex-wrap: wrap;
+        gap: 50px;
+    
+        img {
+            margin-bottom: 20px;
+        }
+
+        h4 {
+            font-size: 1.2em;
+            color: #111111;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        p {
+            font-size: 16px;
+            color: #111111;
+        }
+    
+
+        .card {
+            flex-grow: 1;
+        }
+    }
+
+    #boton {
+        justify-content: center;
+        margin-top: 25px;
+    }
+}
+/* Fin síntomas */
+
+/* Nosotros */
+#seccion-nosotros {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    > div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+
+        > div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            a { 
+                margin-top: 25px;
+            }
+        }
+
+    }
+}
+/* Fin nosotros */
+
+/* TARIFAS */
+#tarifas {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f9fa;
+    
+    > div {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        flex-wrap: wrap;
+        align-items: start;
+        justify-content: center;
+        
+
+        .card {
+            --bs-card-cap-bg: #FCF5ED;
+            text-align: center;
+            min-width: 200px;
+            flex-grow: 1;
+            width: min-content;
+
+            .card-header {
+                height: 30%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100px;
+                
+                h5 {
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+
+        }
+    }
+
+}
+/* FIN TARIFAS*/
+
+/* CONTACTO */
+#contacto {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+    > div {
+        text-align: start;
+
+        p:first-child {
+            padding-bottom: 16px;
+        }
+
+        p:nth-child(2) {
+            padding-bottom: 16px;
+        }
+
+        #form-rrss {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            form {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+                flex-grow: 1;
+                gap: 20px;
+    
+                label {
+                    width: 70px;
+                }
+    
+                #btn {
+                    padding: 5px 50px;
+                }
+            } 
+
+        }
+        
+    }
+}
+
+.rrss {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    flex-grow: 1;
+
+    i {
+        font-size: 1.5em;
+    }
+
+    span {
+        font-size: 1.2em;
+        margin-left: 16px;
+    }
+}
+
+/* FIN CONTACTO */
+
+@media (width < 1000px) {
+
+    .cards img {
+        display: none;
+    }
+
+    #seccion-nosotros > div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rrss {
+        display: none;
+    }
+        
+
+    #formulario {
+        display: flex;
+        flex-direction: column;
+
+        > div{
+            width: 100%;
+        } 
+    }
+}
+
