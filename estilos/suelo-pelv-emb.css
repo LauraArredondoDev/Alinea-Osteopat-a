@@ -16,9 +16,11 @@ header {
 
 .accordion {
     width: 60%;
+    --bs-accordion-border-color: none;
 
     .accordion-button {
         height: 8rem;
+        background-color: #f9cc9d78;
 
         p {
             display: flex;
@@ -37,16 +39,17 @@ header {
     }
 
     .accordion-button:not(.collapsed) {
-        background-color: #f9cc9d78;
+        background-color: #F5AC5C;
     } 
     
     .accordion-button:hover {
         background-color: #F5AC5C;
     }
 
-    .accordion-body{
-        background-color: #f9cc9d78;
+    .accordion-body {
+        background-color: #F5AC5C;
     }
+    
     
 }
 

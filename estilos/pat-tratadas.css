@@ -19,6 +19,7 @@ header {
 
     .accordion-button {
         height: 8rem;
+        background-color: #f9cc9d78;
 
         p {
             display: flex;
@@ -32,7 +33,7 @@ header {
     }
 
     .accordion-button:not(.collapsed) {
-        background-color: #f9cc9d78;
+        background-color: #F5AC5C;
     } 
     
     .accordion-button:hover {
@@ -40,7 +41,7 @@ header {
     }
 
     .accordion-body{
-        background-color: #f9cc9d78;
+        background-color: #F5AC5C;
     }
     
 }
