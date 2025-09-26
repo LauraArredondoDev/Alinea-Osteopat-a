@@ -15,12 +15,7 @@ function enviarMail() {
     const mensaje = textArea + saltoLineaGmail + 'Un saludo' + saltoLineaGmail + nombre + ' ' + apellidos + ', ' + telefono + ', ' + correo;
 
     
-    // if (telefono.length === 9 ) {
-    //     telefono.style.border = '2px solid green';
-
-    // }else {
-    //     telefono.style.border = '2px solid red';
-    // }
+    
 
     // lista con los elementos del formulario
     let campos = form.querySelectorAll('input, textarea')
@@ -30,7 +25,7 @@ function enviarMail() {
     for (let i = 0; i < campos.length; i++) {
         let campo = campos[i];
 
-        if(campo.value.trim() === '') { //Si campo está vacío se pone el borde rojo y el formulario no es válido
+        if(campo.value.trim() === ' ') { //Si campo está vacío se pone el borde rojo y el formulario no es válido
             campo.style.border = '2px solid red';
             valido = false;
 
