@@ -56,6 +56,11 @@ h2 {
     background-color: #e0e1e15d;
 }
 
+.mensaje-error {
+    color: red;
+    display: none;
+}
+
 
 /* ------------------Barra de navegación----------------- */
 

@@ -102,8 +102,9 @@
                                 <label for="input-nombre" class="col-form-label">Nombre</label>
                             </div>
                             <div class="col-auto">
-                                <input type="text" id="input-nombre" class="form-control">
+                                <input type="text" id="input-nombre" class="form-control" oninput="comprobarCampoCorrecto('input-nombre')">
                             </div>
+                            <span id="error-vacio-input-nombre" class="mensaje-error">El campo nombre no puede estar vacío</span>
                         </div>
 
                         <div class="row g-3 align-items-center">
@@ -111,8 +112,9 @@
                                 <label for="input-apellidos" class="col-form-label">Apellidos</label>
                             </div>
                             <div class="col-auto">
-                                <input type="text" id="input-apellidos" class="form-control">
+                                <input type="text" id="input-apellidos" class="form-control" oninput="comprobarCampoCorrecto('input-apellidos')">
                             </div>
+                            <span id="error-vacio-input-apellidos" class="mensaje-error">El campo apellidos no puede estar vacío</span>
                         </div>
 
                         <div class="row g-3 align-items-center">
@@ -120,8 +122,10 @@
                                 <label for="input-telefono" class="col-form-label">Teléfono</label>
                             </div>
                             <div class="col-auto">
-                                <input type="tel" id="input-telefono" class="form-control">
+                                <input type="tel" id="input-telefono" class="form-control" oninput="comprobarCampoCorrecto('input-telefono')">
                             </div>
+                            <span id="error-vacio-input-telefono" class="mensaje-error">El campo telefono no puede estar vacío</span>
+                            <span id="error-caracteres-input-telefono" class="mensaje-error">Solo se aceptan números en el campo teléfono. Deben ser 9</span>
                         </div>
 
                         <div class="row g-3 align-items-center">
@@ -129,8 +133,10 @@
                                 <label for="input-correo" class="col-form-label">Email</label>
                             </div>
                             <div class="col-auto">
-                                <input type="email" id="input-correo" class="form-control">
+                                <input type="email" id="input-correo" class="form-control" oninput="comprobarCampoCorrecto('input-correo')">
                             </div>
+                            <span id="error-vacio-input-correo" class="mensaje-error">El campo correo no puede estar vacío</span>
+                            <span id="error-caracteres-input-correo" class="mensaje-error">El correo debe tener la siguiente forma: texto@texto</span>
                         </div>
 
                         <div class="g-3 row align-items-center">
@@ -138,8 +144,9 @@
                                 <label for="input-mensaje" class="form-label">Mensaje</label>
                             </div>
                             <div class="col-auto">
-                                <textarea class="form-control" id="input-mensaje" rows="5" cols="40"></textarea>
+                                <textarea class="form-control" id="input-mensaje" rows="5" cols="40" oninput="comprobarCampoCorrecto('input-mensaje')"></textarea>
                             </div>
+                            <span id="error-vacio-input-mensaje" class="mensaje-error">El campo mensaje no puede estar vacío</span>
                         </div>
 
                         <button type="button" id="btn" class="btn btn-primary" onclick="enviarMail()">ENVIAR</button>
