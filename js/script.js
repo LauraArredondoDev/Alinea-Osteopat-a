@@ -11,8 +11,18 @@ function enviarMail() {
         }
     }
 
-    if(deboEnviarMail) {
-        //hacer cosas
+    if(deboEnviarMail) { 
+        const nombre = document.getElementById('input-nombre');
+        const apellidos = document.getElementById('input-apellidos');
+        const telefono = document.getElementById('input-telefono');
+        const correo = document.getElementById('input-correo');
+        const textarea = document.getElementById('input-mensaje');
+        const saltoLineaGmail = '%0D%0A';
+        const mensajeCorreo = textarea.value + saltoLineaGmail + 'Un saludo' + saltoLineaGmail + nombre + ' ' + apellidos + ',' + telefono + ',' + correo;
+        const correoClinica = 'lauraarredondodev@gmail.com';
+        const urlGmail = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + correoClinica + '&su=Cita&body=' + mensajeCorreo;
+
+        window.open(urlGmail, '_blank');
     }
     
 }
