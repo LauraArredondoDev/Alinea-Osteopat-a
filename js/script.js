@@ -4,10 +4,10 @@ function enviarMail() {
 
     let deboEnviarMail = true;
 
-    for(const input of listaInputs) {
+    for(const input of listaInputs) { //Se comprueba cada campo, si no es válido se cambia deboEnviarMail a falso, si es correcto se deja en true y se comprueba el siguiente
 
-        if(comprobarCampoCorrecto(input.id) == false) {
-            deboEnviarMail = false;
+        if(comprobarCampoCorrecto(input.id) == false) { 
+            deboEnviarMail = false; 
         }
     }
 
@@ -18,7 +18,7 @@ function enviarMail() {
         const correo = document.getElementById('input-correo');
         const textarea = document.getElementById('input-mensaje');
         const saltoLineaGmail = '%0D%0A';
-        const mensajeCorreo = textarea.value + saltoLineaGmail + 'Un saludo' + saltoLineaGmail + nombre + ' ' + apellidos + ',' + telefono + ',' + correo;
+        const mensajeCorreo = textarea.value + saltoLineaGmail + 'Un saludo' + saltoLineaGmail + nombre.value + ' ' + apellidos.value + ', ' + telefono.value + ', ' + correo.value;
         const correoClinica = 'lauraarredondodev@gmail.com';
         const urlGmail = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + correoClinica + '&su=Cita&body=' + mensajeCorreo;
 
@@ -29,18 +29,20 @@ function enviarMail() {
 
 function comprobarCampoCorrecto(idCampo) {
 
-    const esVacio = comprobarCampoVacio(idCampo);
+    const esVacio = comprobarCampoVacio(idCampo); //esVacio devolverá true o false
 
     const campo = document.getElementById(idCampo);
+
     let caracteresCorrectos = false;
 
-    if(campo.value.trim() !== '') {
+    if(campo.value.trim() !== '') { //si el campo NO está vacío se llama a la función comprobarCaracteresCorrectos para validad el campo de teléfono y correo
 
-        caracteresCorrectos = comprobarCaracteresCorrectos(idCampo);
+        caracteresCorrectos = comprobarCaracteresCorrectos(idCampo); 
+        //caracteresCorrectos será true si el formato del campo es correcto, sino será false
 
     }
 
-    const todoCorrecto = !esVacio && caracteresCorrectos;
+    const todoCorrecto = !esVacio && caracteresCorrectos; //Devuelve true si el campo NO está vacío y si los caracteres con correctos. Si uno de los 2 no se cumple devuelve false.
 
     return todoCorrecto;
 }
@@ -57,11 +59,11 @@ function comprobarCampoVacio(idCampo) {
 
     let campoVacio = campo.value.trim() === '';
 
-    if(!campoVacio) { //si no esta vacio
+    if(!campoVacio) { //si el campo NO esta vacio
         
         campo.style.borderColor='#dee2e6'
 
-        switch(idCampo) {
+        switch(idCampo) { 
             case 'input-nombre':
                 spanVacioNombre.style.display='none';
                 break;
@@ -81,7 +83,7 @@ function comprobarCampoVacio(idCampo) {
                 break;
         }
 
-    } else {
+    } else { //si el campo SÍ está vacío
 
         campo.style.borderColor='red';
 
@@ -129,7 +131,7 @@ function comprobarTelefonoCorrecto(idCampo) {
 
     const esTelefonoValido = /^\d{9}$/;
 
-    if(esTelefonoValido.test(campo.value)) {
+    if(esTelefonoValido.test(campo.value)) { //si el teléfono Sí tiene 9 números
 
         campo.style.borderColor='#dee2e6';
 
@@ -157,7 +159,7 @@ function comprobarCorreoCorrecto(idCampo) {
 
     const correoRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         
-    if (correoRegex.test(campo.value)) { //si el texto SI tiene forma de correo
+    if (correoRegex.test(campo.value)) { //si el texto SÍ tiene forma de correo
 
         campo.style.borderColor='#dee2e6';
 
